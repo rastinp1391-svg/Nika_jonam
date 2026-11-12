@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Nika 💗</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #f8a5c2, #e9b5ff);
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 25px;
+    text-align: center;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(15px);
+    border: 2px solid white;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(180,50,100,0.2);
+}
+
+h1 {
+    color: #d63384;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.heart {
+    font-size: 65px;
+    animation: beat 1s infinite;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #a83268;
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 600;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 23px;
+    border: none;
+    border-radius: 30px;
+    background: #e75491;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.07);
+}
+
+.language {
+    background: #a64dba;
+    margin: 5px;
+}
+
+#message {
+    display: none;
+    margin-top: 20px;
+    color: #c02670;
+    font-size: 17px;
+    line-height: 2;
+}
+
+#persian {
+    display: none;
+    direction: rtl;
+    font-family: Tahoma, sans-serif;
+}
+
+@keyframes beat {
+    0%, 100% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="english">
+
+    <h1>Nika 💗</h1>
+
+    <div class="heart">💖</div>
+
+    <p>
+        Aji Joonam! 🥹<br>
+        I love you so much!<br>
+        You're the sweetest sister ever.<br>
+        You deserve all the happiness in the world.<br>
+        I love you to the moon and back! 💕<br>
+        Stay happy forever, my cutie!
+    </p>
+
+    <button onclick="showLove('en')">Click Me 💌</button>
+
+    <div id="message">
+        Nikaaa! You're my favorite person!<br>
+        Love you so much! 🫂💗
+    </div>
+
+    <br>
+    <button class="language" onclick="changeLanguage('fa')">
+        فارسی 🇮🇷
+    </button>
+
+</div>
+
+
+<div class="card" id="persian">
+
+    <h1>نیکا جونم 💗</h1>
+
+    <div class="heart">💖</div>
+
+    <p>
+        آجی جونم! 🥹<br>
+        خیلی خیلی دوست دارم!<br>
+        تو بهترین و عزیزترین آجی دنیایی!<br>
+        الهی همیشه لبت خندون باشه.<br>
+        قربون اون قلب مهربونت برم!<br>
+        الهی غم هیچ‌وقت توی دلت نباشه.<br>
+   همیشه شاد و خوشحال باشی عشق داداشی !
+      💕
+    </p>
+
+    <button onclick="showLove('fa')">یه پیام دیگه 💌</button>
+
+    <div id="messageFa" style="display:none; margin-top:20px; color:#c02670;">
+        نیکای قشنگم، تو یکی از قشنگ‌ترین اتفاقای دنیامی!
+        خیلی دوست دارم آجی جونم! 🫂💗
+    </div>
+
+    <br>
+    <button class="language" onclick="changeLanguage('en')">
+        English 🇬🇧
+    </button>
+
+</div>
+
+<script>
+
+function changeLanguage(lang) {
+    document.getElementById("english").style.display =
+        lang === "en" ? "block" : "none";
+
+    document.getElementById("persian").style.display =
+        lang === "fa" ? "block" : "none";
+}
+
+function showLove(lang) {
+    if (lang === "en") {
+        document.getElementById("message").style.display = "block";
+    } else {
+        document.getElementById("messageFa").style.display = "block";
+    }
+}
+
+</script>
+
+</body>
+</html>
+
